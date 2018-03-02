@@ -4688,6 +4688,7 @@ pre code{
 .bkg-red-light{background: #ea4b35; border-color: #ea4b35;}
 .bkg-hover-red-light:hover{background: #c23824; border-color: #c23824;}
 .bkg-black{background: #000000; border-color: #000000;}
+.bkg-tiffany{background: #0abab5; border-color: #0abab5;}
 .bkg-hover-black:hover{background: #000000; border-color: #000000;}
 .bkg-white{background: #ffffff; border-color: #ffffff;}
 .bkg-hover-white:hover{background: #ffffff; border-color: #ffffff;}
@@ -4777,6 +4778,8 @@ pre code{
 .color-red-light{color: #ea4b35;}
 .color-hover-red-light:hover{color: #c23824;}
 .color-white{color: #ffffff;}
+.color-tiffany{color: #0abab5;}
+.color-hover-tiffany{color: #0abab5;}
 .color-hover-white:hover{color: #ffffff;}
 .color-grey{color: #666666;}
 .color-hover-grey:hover{color: #555555;}
