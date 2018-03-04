@@ -98,7 +98,7 @@
 	// Default
 	$.fn.counter.tmcOpts = {
 		autoStart: true,					// Boolean: Whether counter should start automatically
-		from: 500,							// Integer: starting number
+		from: 0,							// Integer: starting number
 		to: 100, 							// Integer: ending number
 		interval: 20,						// Integer: how often counter should update in milliseconds
 		onComplete: null					// Integer: once counting is done
