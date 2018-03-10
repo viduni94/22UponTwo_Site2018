@@ -5444,3 +5444,7 @@ a{
         margin-bottom: 20px;
     }
 }
+.packages-section {
+	padding-top: 2rem !important;
+	padding-bottom: 3rem !important;
+}
