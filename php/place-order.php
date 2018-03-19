@@ -1,6 +1,6 @@
 <?php
 	// Your Email
-	$recipient = "info@22upontwo.com"; // PLEASE SET YOUR EMAIL ADDRESS
+	$recipient = "info@22upontwo.com";
 
 	// Check $recipient
 	if($recipient === '') {
@@ -14,7 +14,7 @@
 	}
 
 	// Check for empty required field
-	if(!isset($_POST["email"]) || !isset($_POST["fname"]) || !isset($_POST["message"]) || !isset($_POST["lname"])) {
+	if(!isset($_POST["email"]) || !isset($_POST["fname"]) || !isset($_POST["lname"]) || !isset($_POST["mobile"]))) {
 		returnAndExitAjaxResponse(
 			constructAjaxResponseArray(
 				FALSE,
@@ -27,15 +27,16 @@
 	// Sanitize input
 	$fname	= filter_var($_POST["fname"], FILTER_SANITIZE_STRING);
 	$lname	= filter_var($_POST["lname"], FILTER_SANITIZE_EMAIL);
-	$website = $_POST["website"];
-	if (!preg_match("~^(?:f|ht)tps?://~i", $website)) $website = "http://" . $website;
-	$website = filter_var($website, FILTER_VALIDATE_URL);
+	$mobile = filter_var($_POST["mobile"], FILTER_SANITIZE_EMAIL);
+	$service = filter_var($_POST["service"], FILTER_SANITIZE_EMAIL);
+	$package = filter_var($_POST["package"], FILTER_SANITIZE_EMAIL);
+	$price = filter_var($_POST["price"], FILTER_SANITIZE_EMAIL);
 	$email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 	$message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
 
 	// If non required fields are empty
-	if ( empty($website) ){
-		$website = "No website entered.";
+	if ( empty($message) ){
+		$message = "No message entered.";
 	}
 
 	// Headers
@@ -44,13 +45,16 @@
 	$headers .= 'X-Mailer: PHP/' . phpversion();
 
 	// Subject
-	$subject = "New email from contact form";
+	$subject = "New order placed";
 
 	// Build Message
 	$email_content = "First Name: $fname\n";
 	$email_content .= "Last Name: $lname\n";
-	$email_content .= "Website: $website\n";
-	$email_content .= "Email: $email\n\n";
+	$email_content .= "Mobile: $mobile\n";
+	$email_content .= "Email: $email\n";
+	$email_content .= "Service: $service\n";
+	$email_content .= "Package: $package\n";
+	$email_content .= "PRice: $price\n\n";
 	$email_content .= "Message:\n$message\n\n\n";
 	$email_content .= "CLIENT IP:\n".get_client_ip()."\n";
 	$email_content .= "HOST IP:\n".$_SERVER['SERVER_ADDR']."\n";

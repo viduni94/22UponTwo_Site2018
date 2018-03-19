@@ -156,7 +156,7 @@
 						<br>
 						<div class="column width-8 offset-2 center">
 							<div class="contact-form-container">
-								<form class="contact-form" action="php/send-email.php" method="post" novalidate>
+								<form class="contact-form" action="php/place-order.php" method="post" novalidate>
 									<div class="row">
 										<div class="column width-6" style="display: none;">
 											<input type="text" name="date" class="form-fname form-element large no-padding" value="<?php echo date("Y/m/d"); ?>">
