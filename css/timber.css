@@ -5482,3 +5482,16 @@ a{
 .desc-line-height {
 	line-height: 1.5;
 }
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+	.intro-title-2 {
+		height: 25rem;
+		padding-top: 128px;
+	}
+}
+
+.readonly {
+	color: rgb(0,0,0) !important;
+	background-color: rgba(0,0,0,0.1) !important;
+	user-select: none;
+}

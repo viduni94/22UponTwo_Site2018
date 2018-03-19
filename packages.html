@@ -183,7 +183,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Website', 'Basic', '20000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -218,7 +218,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Website', 'Standard', '45000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -255,7 +255,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Website', 'Premium', '70000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -276,7 +276,7 @@
 						                    <span class="subtitle">A custom quotation can be<br> obtained for websites or<br> web-based systems. </span>
 						                </div>
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block1 btn-default">Request Quote</a>
+						                    <button href="order-form.php" onclick="storeInfo('Website', 'Custom', '--');" class="btn btn-block1 btn-default">Request Quote</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -313,7 +313,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Content', 'Basic', '750 per page');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -339,7 +339,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Content', 'Standard', '1000 per page');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -365,7 +365,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Content', 'Premium', '1500 per page');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -402,7 +402,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Social Media', 'Basic', '15000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -430,7 +430,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Social Media', 'Standard', '30000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -462,7 +462,7 @@
 						                    </ul>
 						                </div><!-- /  CONTENT BOX-->
 						                <div class="pricingTable-sign-up"><!-- BUTTON BOX-->
-						                    <a href="#" class="btn btn-block btn-default">Order Now</a>
+						                    <button href="order-form.php" onclick="storeInfo('Social Media', 'Premium', '45000');" class="btn btn-block btn-default">Order Now</button>
 						                </div><!-- BUTTON BOX-->
 						            </div>
 						        </div>
@@ -537,6 +537,15 @@
 	</div>
 
 	<!-- Js -->
+	<script type="text/javascript">
+		function storeInfo(a,b,c) {
+			localStorage.setItem("service", a);
+			localStorage.setItem("package", b);
+			localStorage.setItem("price", c);
+			window.location.href = 'order-form.php';
+		}
+	</script>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maps.googleapis.com/maps/api/js?v=3"></script>
 	<script src="js/timber.master.min.js"></script>
