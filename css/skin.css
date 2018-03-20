@@ -782,7 +782,7 @@ body,
 	border-bottom: 1px solid transparent;
 }
 .header-transparent .header-inner > .nav-bar{
-	border-bottom: 2px solid rgba(255,255,255, 0.5);
+	border-bottom: 0.5px solid rgba(255,255,255, 0.5);
 }
 
 /* Background Header - On Scroll! */
