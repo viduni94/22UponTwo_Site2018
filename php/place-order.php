@@ -14,7 +14,7 @@
 	}
 
 	// Check for empty required field
-	if(!isset($_POST["email"]) || !isset($_POST["fname"]) || !isset($_POST["lname"]) || !isset($_POST["mobile"]))) {
+	if(!isset($_POST["email"]) || !isset($_POST["fname"]) || !isset($_POST["lname"]) || !isset($_POST["mobile"])) {
 		returnAndExitAjaxResponse(
 			constructAjaxResponseArray(
 				FALSE,
@@ -54,7 +54,7 @@
 	$email_content .= "Email: $email\n";
 	$email_content .= "Service: $service\n";
 	$email_content .= "Package: $package\n";
-	$email_content .= "PRice: $price\n\n";
+	$email_content .= "Price: $price\n\n";
 	$email_content .= "Message:\n$message\n\n\n";
 	$email_content .= "CLIENT IP:\n".get_client_ip()."\n";
 	$email_content .= "HOST IP:\n".$_SERVER['SERVER_ADDR']."\n";
@@ -91,12 +91,12 @@ try {
 	Construct ajax response array
 	Input: Result (bool), Message (optional), Data to be sent back in array
 */
-function constructAjaxResponseArray ($_response, $_message = '', $_json = null) {
+function constructAjaxResponseArray ($_response, $_message = '') {
 	$_responseArray = array();
 	$_response = ( $_response === TRUE ) ? TRUE : FALSE;
 	$_responseArray['response'] = $_response;
 	if(isset($_message)) $_responseArray['message'] = $_message;
-	if(isset($_json)) $_responseArray['json'] = $_json;
+	// if(isset($_json)) $_responseArray['json'] = $_json;
 
 	return $_responseArray;
 }
