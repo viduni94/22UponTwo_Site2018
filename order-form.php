@@ -47,7 +47,7 @@
 										<a href="about.html">About</a>
 									</li>
 									<li>
-										<a href="blog.html">Blog</a>
+										<a href="blog">Blog</a>
 									</li>
 									<li>
 										<a href="portfolio.html">Client Portfolio</a>
@@ -110,9 +110,6 @@
 									</li>
 									<li>
 										<a href="portfolio.html">Portfolio</a>
-									</li>
-									<li>
-										<a href="portfolio.html">Portfolio</a>
 										<ul class="sub-menu">
 											<li>
 												<a href="portfolio.html">Client Portfolio</a>
@@ -123,7 +120,10 @@
 										</ul>
 									</li>
 									<li>
-										<a href="blog.html">Blog</a>
+										<a href="packages.html">Packages and Pricing</a>
+									</li>
+									<li>
+										<a href="blog">Blog</a>
 									</li>
 									<li class="current">
 										<a href="contact.html">Contact</a>
@@ -257,7 +257,7 @@
 									</li>
 									<li>
 										<!-- <span class="post-info"><span class="post-date">15 May 2014</span></span> -->
-										<a href="#">Read our Blog</a>
+										<a href="blog">Read our Blog</a>
 									</li>
 									<li>
 										<!-- <span class="post-info"><span class="post-date">15 May 2014</span></span> -->
